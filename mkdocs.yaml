@@ -1,0 +1,67 @@
+site_name: Hermes
+site_description: Notifications for your Argo Workflows
+site_url: https://kjagiello.github.io/hermes/
+
+repo_name: kjagiello/hermes
+repo_url: https://github.com/kjagiello/hermes
+edit_uri: ""
+
+docs_dir: docs/content
+
+theme:
+  name: material
+  palette:
+    scheme: "default"
+    primary: "black"
+    accent: "indigo"
+  icon:
+    logo: material/send
+  features:
+    - content.code.annotate
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.instant
+    - navigation.sections
+  custom_dir: docs/overrides
+
+nav:
+  - Home:
+    - Introduction: "index.md"
+    - Quickstart: "quickstart.md"
+  - Services:
+    - Introduction to services: "services/index.md"
+    - Supported services:
+      - Slack: "services/slack/index.md"
+
+extra:
+  version:
+    provider: mike
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/kjagiello/hermes
+  github_raw_url_tpl: https://raw.githubusercontent.com/kjagiello/hermes/{version}/{path}
+  hermes_version: !ENV HERMES_VERSION
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - attr_list
+  - def_list
+  - md_in_html
+
+plugins:
+  - search
+  - macros:
+      module_name: docs/ext
+      include_dir: docs/

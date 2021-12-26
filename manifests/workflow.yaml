@@ -1,0 +1,63 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Workflow
+metadata:
+  generateName: notifications-test-
+spec:
+  entrypoint: main
+  templates:
+    - name: main
+      steps:
+        - - name: setup-notifications
+            template: hermes-setup
+
+        - - name: pre-notification
+            template: hermes-notify
+            arguments:
+              parameters:
+                - name: message
+                  value: "Deployment started :hourglass_flowing_sand:"
+
+        - - name: hello
+            template: hello
+
+        - - name: post-notification
+            template: hermes-notify
+            arguments:
+              parameters:
+                - name: message
+                  value: "Deployment succeeded :white_check_mark:"
+
+    - name: hermes-setup
+      plugin:
+        hermes:
+          setup:
+            alias: default
+            service: slack
+            config:
+              token: slack-token
+              icon_emoji: ":rocket:"
+
+    - name: hermes-notify
+      inputs:
+        parameters:
+          - name: message
+      plugin:
+        hermes:
+          notify:
+            target: default
+            template: hermes-template-slack-default
+            config:
+              channel: kjagiello-sandbox
+            context:
+              message: "{{inputs.parameters.message}}"
+              app: hermes
+              env: prod
+              revision_sha: "deadbeef"
+              revision_url: "https://google.com"
+              log_url: "https://google.com"
+
+    - name: hello
+      container:
+        image: docker/whalesay
+        command: [cowsay]
+        args: ["hello world"]
