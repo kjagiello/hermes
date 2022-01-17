@@ -71,6 +71,7 @@ to render the notification. A template at its core is just a
 has following shape:
 
 ```yaml title="hermes-template"
+{% raw %}
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -79,6 +80,7 @@ data:
   subtemplate1: |
     {"message": "{{message}}"}
   # subtemplate2: ...
+{% endraw %}
 ```
 
 The `{{message}}` you are seeing in the template above is a [Handlebar

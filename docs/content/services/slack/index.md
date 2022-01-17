@@ -74,6 +74,7 @@ stringData:
 Add the following template:
 
 ```yaml
+{% raw %}
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -125,6 +126,7 @@ data:
     }
   secondary: |
     {"text": "{{message}}"}
+{% endraw %}
 ```
 
 ### Send notification
