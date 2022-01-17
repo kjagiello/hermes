@@ -737,13 +737,13 @@ that has access to this secret.</p>
 <span class="nt">data</span><span class="p">:</span><span class="w"></span>
 <span class="w">  </span><span class="nt">primary</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
 <span class="w">    </span><span class="no">{</span><span class="w"></span>
-<span class="w">      </span><span class="no">&quot;text&quot;: &quot;&quot;,</span><span class="w"></span>
+<span class="w">      </span><span class="no">&quot;text&quot;: &quot;{{message}}&quot;,</span><span class="w"></span>
 <span class="w">      </span><span class="no">&quot;blocks&quot;: [</span><span class="w"></span>
 <span class="w">        </span><span class="no">{</span><span class="w"></span>
 <span class="w">          </span><span class="no">&quot;type&quot;: &quot;section&quot;,</span><span class="w"></span>
 <span class="w">          </span><span class="no">&quot;text&quot;: {</span><span class="w"></span>
 <span class="w">            </span><span class="no">&quot;type&quot;: &quot;mrkdwn&quot;,</span><span class="w"></span>
-<span class="w">            </span><span class="no">&quot;text&quot;: &quot;&quot;</span><span class="w"></span>
+<span class="w">            </span><span class="no">&quot;text&quot;: &quot;{{message}}&quot;</span><span class="w"></span>
 <span class="w">          </span><span class="no">}</span><span class="w"></span>
 <span class="w">        </span><span class="no">},</span><span class="w"></span>
 <span class="w">        </span><span class="no">{</span><span class="w"></span>
@@ -751,11 +751,11 @@ that has access to this secret.</p>
 <span class="w">          </span><span class="no">&quot;fields&quot;: [</span><span class="w"></span>
 <span class="w">            </span><span class="no">{</span><span class="w"></span>
 <span class="w">              </span><span class="no">&quot;type&quot;: &quot;mrkdwn&quot;,</span><span class="w"></span>
-<span class="w">              </span><span class="no">&quot;text&quot;: &quot;*Application*\n&quot;</span><span class="w"></span>
+<span class="w">              </span><span class="no">&quot;text&quot;: &quot;*Application*\n{{app}}&quot;</span><span class="w"></span>
 <span class="w">            </span><span class="no">},</span><span class="w"></span>
 <span class="w">            </span><span class="no">{</span><span class="w"></span>
 <span class="w">              </span><span class="no">&quot;type&quot;: &quot;mrkdwn&quot;,</span><span class="w"></span>
-<span class="w">              </span><span class="no">&quot;text&quot;: &quot;*Environment*\n&quot;</span><span class="w"></span>
+<span class="w">              </span><span class="no">&quot;text&quot;: &quot;*Environment*\n{{env}}&quot;</span><span class="w"></span>
 <span class="w">            </span><span class="no">}</span><span class="w"></span>
 <span class="w">          </span><span class="no">]</span><span class="w"></span>
 <span class="w">        </span><span class="no">},</span><span class="w"></span>
@@ -764,7 +764,7 @@ that has access to this secret.</p>
 <span class="w">          </span><span class="no">&quot;fields&quot;: [</span><span class="w"></span>
 <span class="w">            </span><span class="no">{</span><span class="w"></span>
 <span class="w">              </span><span class="no">&quot;type&quot;: &quot;mrkdwn&quot;,</span><span class="w"></span>
-<span class="w">              </span><span class="no">&quot;text&quot;: &quot;*Revision*\n&lt;|&gt;&quot;</span><span class="w"></span>
+<span class="w">              </span><span class="no">&quot;text&quot;: &quot;*Revision*\n&lt;{{revision_url}}|{{revision_sha}}&gt;&quot;</span><span class="w"></span>
 <span class="w">            </span><span class="no">}</span><span class="w"></span>
 <span class="w">          </span><span class="no">]</span><span class="w"></span>
 <span class="w">        </span><span class="no">},</span><span class="w"></span>
@@ -773,14 +773,14 @@ that has access to this secret.</p>
 <span class="w">          </span><span class="no">&quot;elements&quot;: [</span><span class="w"></span>
 <span class="w">            </span><span class="no">{</span><span class="w"></span>
 <span class="w">              </span><span class="no">&quot;type&quot;: &quot;mrkdwn&quot;,</span><span class="w"></span>
-<span class="w">              </span><span class="no">&quot;text&quot;: &quot;&lt;|View pipeline logs&gt;&quot;</span><span class="w"></span>
+<span class="w">              </span><span class="no">&quot;text&quot;: &quot;&lt;{{log_url}}|View pipeline logs&gt;&quot;</span><span class="w"></span>
 <span class="w">            </span><span class="no">}</span><span class="w"></span>
 <span class="w">          </span><span class="no">]</span><span class="w"></span>
 <span class="w">        </span><span class="no">}</span><span class="w"></span>
 <span class="w">      </span><span class="no">]</span><span class="w"></span>
 <span class="w">    </span><span class="no">}</span><span class="w"></span>
 <span class="w">  </span><span class="nt">secondary</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">|</span><span class="w"></span>
-<span class="w">    </span><span class="no">{&quot;text&quot;: &quot;&quot;}</span><span class="w"></span>
+<span class="w">    </span><span class="no">{&quot;text&quot;: &quot;{{message}}&quot;}</span><span class="w"></span>
 </code></pre></div>
 <h3 id="send-notification">Send notification</h3>
 <p>Fill in the channel name in the workflow below and submit it.</p>

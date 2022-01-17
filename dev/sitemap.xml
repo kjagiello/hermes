@@ -2,27 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://kjagiello.github.io/hermes/dev/</loc>
-         <lastmod>2022-01-16</lastmod>
+         <lastmod>2022-01-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kjagiello.github.io/hermes/dev/compatibility/</loc>
-         <lastmod>2022-01-16</lastmod>
+         <lastmod>2022-01-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kjagiello.github.io/hermes/dev/quickstart/</loc>
-         <lastmod>2022-01-16</lastmod>
+         <lastmod>2022-01-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kjagiello.github.io/hermes/dev/services/</loc>
-         <lastmod>2022-01-16</lastmod>
+         <lastmod>2022-01-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://kjagiello.github.io/hermes/dev/services/slack/</loc>
-         <lastmod>2022-01-16</lastmod>
+         <lastmod>2022-01-17</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
