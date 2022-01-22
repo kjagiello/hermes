@@ -517,6 +517,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup-config" class="md-nav__link">
+    Setup config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notify-config" class="md-nav__link">
+    Notify config
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -635,6 +662,33 @@
           <li class="md-nav__item">
   <a href="#send-notification" class="md-nav__link">
     Send notification
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reference" class="md-nav__link">
+    Reference
+  </a>
+  
+    <nav class="md-nav" aria-label="Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#setup-config" class="md-nav__link">
+    Setup config
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notify-config" class="md-nav__link">
+    Notify config
   </a>
   
 </li>
@@ -848,6 +902,46 @@ that has access to this secret.</p>
 <span class="w">        </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="nv">cowsay</span><span class="p p-Indicator">]</span><span class="w"></span>
 <span class="w">        </span><span class="nt">args</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;hello</span><span class="nv"> </span><span class="s">world&quot;</span><span class="p p-Indicator">]</span><span class="w"></span>
 </code></pre></div>
+<h2 id="reference">Reference</h2>
+<h3 id="setup-config">Setup config</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>token</td>
+<td>yes</td>
+<td>The name of the secret containing the Slack OAuth token. The token has to be stored in the <code>token</code> field in the secret.</td>
+</tr>
+<tr>
+<td>icon_emoji</td>
+<td>no</td>
+<td>A shortcode for the emoji to use as the bot avatar, e.g. <code>:rocket</code>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="notify-config">Notify config</h3>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>channel</td>
+<td>yes</td>
+<td>The name of the channel to send the notification to, .e.g <code>argo-alerts</code>.</td>
+</tr>
+</tbody>
+</table>
 
               
             </article>
