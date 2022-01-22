@@ -200,3 +200,20 @@ spec:
         args: ["hello world"]
 {% endraw %}
 ```
+
+## Reference
+
+### Setup config
+
+
+| Field | Required | Description |
+| - | - | - |
+| token | yes | The name of the secret containing the Slack OAuth token. The token has to be stored in the `token` field in the secret. |
+| icon_emoji | no | A shortcode for the emoji to use as the bot avatar, e.g. `:rocket`. |
+
+
+### Notify config
+
+| Field | Required | Description |
+| - | - | - |
+| channel | yes | The name of the channel to send the notification to, .e.g `argo-alerts`. |
