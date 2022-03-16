@@ -543,12 +543,9 @@
 
 <h1 id="quick-start">Quick Start</h1>
 <div class="admonition warning">
-<p class="admonition-title">Compatibilty disclaimer</p>
-<p>Hermes builds upon Argo Workflow's yet to be released support for <a href="https://github.com/argoproj/argo-workflows/pull/7256">template
-executor plugins</a>,
-which means that you will most likely not be able to use it in your cluster
-yet. If you still want to try Hermes out, you will have to build and
-install Argo Workflow from the PR.</p>
+<p class="admonition-title">Compatibilty warning</p>
+<p>Hermes requires Argo Workflows 3.3+ which comes with support for <a href="https://argoproj.github.io/argo-workflows/executor_plugins/">template
+executor plugins</a>.</p>
 </div>
 <h2 id="install-hermes">Install Hermes</h2>
 <p>Install Hermes by creating following the ConfigMap in your cluster:</p>
